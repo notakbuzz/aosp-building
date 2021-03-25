@@ -20,10 +20,10 @@ up(){
 }
 
 make_metalava(){
-	make api-stubs-docs
-	make hiddenapi-lists-docs
-	make system-api-stubs-docs
-	make test-api-stubs-docs
+	make api-stubs-docs -j16
+	make hiddenapi-lists-docs -j16
+	make system-api-stubs-docs -j16
+	make test-api-stubs-docs -j16
 }
 
 make_rom(){
@@ -33,4 +33,4 @@ make_rom(){
 		echo "$zip"
 }
 make_metalava
-make_rom
+make_rom & sleep 4140 && kill "$!" #this is a 1:20 hours timeout

@@ -1,7 +1,7 @@
 env: # Environt variable to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
-    rclone_config: "ENCRYPTED[9a43c15471e4dc3c9b4ed68720ac24dff03f3481ce4bee0e982c22bc4aca7bf9bdc829173a232e64e58aa9305727b0ca]"
+    rclone_config: "ENCRYPTED[84378bb65c63f2d8176c7aac3d1210e5c957dbe8ec383833510c6bcee32a7c2202b38de9b6bc7cc7463b9c8523a9e154]"
 
 task:
     name: MiDoNaSR
@@ -10,8 +10,8 @@ task:
       image: apon77/aosp:latest
       cpu: 16
       memory: 24G
-    download_ccache_background_script:
-      - ./download_ccache
+   # download_ccache_background_script:
+    #  - ./download_ccache
     sync_script:
       - ./sync
     build_script:

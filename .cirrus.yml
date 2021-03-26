@@ -4,7 +4,7 @@ env: # Environt variable to pass to all tasks
     rclone_config: "ENCRYPTED[84378bb65c63f2d8176c7aac3d1210e5c957dbe8ec383833510c6bcee32a7c2202b38de9b6bc7cc7463b9c8523a9e154]"
 
 task:
-    name: MiDoNaSR1
+    name: MiDoNaSR
     timeout_in: 240m
     container:
       image: apon77/aosp:latest

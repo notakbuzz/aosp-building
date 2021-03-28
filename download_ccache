@@ -5,8 +5,18 @@ free -h
 nproc
 cat /etc/os*
 env
+# Telgram env setup
+export BOT_MSG_URL="https://api.telegram.org/bot$API_BOT/sendMessage"
+export BOT_BUILD_URL="https://api.telegram.org/bot$API_BOT/sendDocument"
 
-url=https://server.midonasr.workers.dev/ccache.tar.gz
+tg_post_msg() {
+        curl -s -X POST "$BOT_MSG_URL" -d chat_id="$2" \
+        -d "parse_mode=html" \
+        -d text="$1"
+}
+tg_post_msg "<b>Downloading ccache</b>" "$CHATID"
+
+url=https://server.midonasr.workers.dev/dot/ccache.tar.gz
 
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50

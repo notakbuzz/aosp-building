@@ -12,7 +12,7 @@ export ALLOW_MISSING_DEPENDENCIES=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-ccache -M 50G
+ccache -M 25G
 ccache -o compression=true
 ccache -z
 
@@ -34,6 +34,7 @@ up(){
 }
 
 make_metalava(){
+tg_post_msg "<b>MetaLava is building rn</b>" "$CHATID"
 	make api-stubs-docs
 	make hiddenapi-lists-docs
 	make system-api-stubs-docs
@@ -42,7 +43,7 @@ make_metalava(){
 
 make_rom(){
 tg_post_msg "<b>DotOS CI Build Triggered for Ysl</b>" "$CHATID"
-                make bacon -j16
+                make bacon -j10
 if [ -f out/target/product/ysl/*zip ]; then
 		zip=$(up out/target/product/ysl/*zip)
 		echo " "

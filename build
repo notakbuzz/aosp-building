@@ -43,7 +43,7 @@ tg_post_msg "<b>MetaLava is building rn</b>" "$CHATID"
 
 make_rom(){
 tg_post_msg "<b>DotOS CI Build Triggered for Ysl</b>" "$CHATID"
-                make bacon -j10
+                make bacon -j14
 if [ -f out/target/product/ysl/*zip ]; then
 		zip=$(up out/target/product/ysl/*zip)
 		echo " "

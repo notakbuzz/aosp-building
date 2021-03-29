@@ -5,10 +5,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch dot_ysl-userdebug
-export SELINUX_IGNORE_NEVERALLOWS=true
-export BUILD_BROKEN_DUP_RULES=true
-export ALLOW_MISSING_DEPENDENCIES=true
+lunch p404_ginkgo-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -42,10 +39,10 @@ tg_post_msg "<b>MetaLava is building rn</b>" "$CHATID"
 }
 
 make_rom(){
-tg_post_msg "<b>DotOS CI Build Triggered for Ysl</b>" "$CHATID"
+tg_post_msg "<b>Proeject404 CI Build Triggered for ginkgo</b>" "$CHATID"
                 make bacon -j14
-if [ -f out/target/product/ysl/*zip ]; then
-		zip=$(up out/target/product/ysl/*zip)
+if [ -f out/target/product/ginkgo/*zip ]; then
+		zip=$(up out/target/product/ginkgo/*zip)
 		echo " "
 		echo "$zip"
 		tg_post_msg "<b>Build Completed</b>%0A%0A<b>Link : </b> <code>"$zip"</code>" "$CHATID"

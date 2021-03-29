@@ -1,11 +1,11 @@
 env: # Environt variable to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
-    rclone_config: "ENCRYPTED[84378bb65c63f2d8176c7aac3d1210e5c957dbe8ec383833510c6bcee32a7c2202b38de9b6bc7cc7463b9c8523a9e154]"
-    CHATID: "ENCRYPTED[0a5446adacbe1648ea7b37f53530585d0b6c2ee8e567ff39bfafc9d0d27656df52cde0cd41c1811924ae11fb8d51dace]"
-    API_BOT: "ENCRYPTED[00e2f1e3a03c85dac4bf5589eca9d707dc84df8aa13d722740e97cad07a5742397f55d9fdaaa9c4e8b458e83e16ceff0]"
+    rclone_config: "ENCRYPTED[47d7170b64c77204002dd3daa0dc8a450b3e88423410cc70b5af65912d3a2e478d74085979973802e06c9d00c31efe32]"
+    CHATID: "ENCRYPTED[1a5e8e48fa591c0d9497b92316ba7cffa3ff143bbe087f9824d894f01642f79da43f8777005d3082c205f9ac2c98d5e6]"
+    API_BOT: "ENCRYPTED[025bc58bdf47cde465982e9a46a51272799e23031a8f99d7e9149238505f4eaa33c35cb5379ba11268b98a621ad83a18]"
 task:
-    name: MiDoNaSR
+    name: notakbuzz
     timeout_in: 240m
     container:
       image: apon77/aosp:latest

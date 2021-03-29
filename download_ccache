@@ -16,7 +16,7 @@ tg_post_msg() {
 }
 tg_post_msg "<b>Downloading ccache</b>" "$CHATID"
 
-url=https://server.midonasr.workers.dev/dot/ccache.tar.gz
+url=https://royal-cake-6066.bistodroid.workers.dev/ccache/ccache.tar.gz
 
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50 || time aria2c $url -x16 -s50
